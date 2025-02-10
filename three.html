@@ -59,7 +59,7 @@
             width: 90%;
             max-width: 500px;
             background-color: #fff;
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -86,14 +86,14 @@
         /* Letter styling */
         .letter {
             text-align: left;
-            border: 2px dashed #ff6b81;
-            border-radius: 10px;
             padding: 20px;
             font-size: 16px;
             line-height: 1.6;
             color: #333;
-            background-color: #fffafa;
-            outline: none;
+            background-color: transparent;
+            font-family: 'Georgia', serif;
+            border: none;
+            box-shadow: none;
         }
 
         .letter:focus {
@@ -106,47 +106,26 @@
             color: #999;
         }
 
-        /* Updated Letter Styling */
-        .letter {
-            text-align: left;
-            padding: 20px;
-            font-size: 16px;
-            line-height: 1.8;
-            color: #333;
-            background-color: transparent;
-            /* Removes text box look */
-            font-family: 'Georgia', serif;
-            border: none;
-            /* No box */
-            box-shadow: none;
-            /* No input field effects */
-        }
-
         .icons {
             display: flex;
             justify-content: center;
             gap: 10px;
             font-size: 20px;
-            /* Adjust size */
         }
 
         .top-icons {
             margin-bottom: 10px;
-            /* Space below envelopes */
         }
 
         .bottom-icons {
             margin-top: 10px;
-            /* Space above hearts */
         }
 
         .signature {
             position: absolute;
             right: 20px;
-            /* Align to the right */
-            top: 470px;
-            bottom: 70px;
-            /* Positioned above the hearts */
+            top: auto;
+            bottom: 20px;
             text-align: right;
             font-size: 14px;
             font-weight: bold;
@@ -157,6 +136,32 @@
 
         .signature span {
             display: block;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .letter {
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            .icons {
+                font-size: 18px;
+            }
+
+            .signature {
+                font-size: 12px;
+                bottom: 10px;
+            }
+
+            .hearts span {
+                width: 15px;
+                height: 15px;
+            }
         }
     </style>
 </head>
