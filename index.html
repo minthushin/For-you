@@ -131,6 +131,8 @@
             cursor: pointer;
             color: #d6336c;
             width: 100%;
+            touch-action: manipulation;
+            /* Improves touch responsiveness */
         }
 
         .keypad button:hover {
@@ -154,6 +156,34 @@
 
         .notification.show {
             opacity: 1;
+        }
+
+        /* Mobile-specific adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .image-box {
+                height: 150px;
+                /* Smaller height for mobile */
+            }
+
+            .password-input input {
+                font-size: 16px;
+                /* Smaller font size for mobile */
+            }
+
+            .keypad button {
+                padding: 10px;
+                font-size: 16px;
+                /* Smaller buttons for mobile */
+            }
+
+            .notification {
+                font-size: 12px;
+                /* Smaller notification text for mobile */
+            }
         }
     </style>
 </head>
